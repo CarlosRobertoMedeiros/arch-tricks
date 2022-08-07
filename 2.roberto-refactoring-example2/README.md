@@ -9,7 +9,10 @@
 	- Carlos Roberto Medeiros de Lima
 	
 ## Refatorações
-	- Refatoração aplicando a CPF
+	- Refatoração aplicando Exemplo de Criação de Conta
+		* Aplicado a criação de um classe conta utilizando os testes com separação entre (Spy, Fake, Stub e Mock).
+		
+		* Falta melhorar a distinção do teste
 	
 	
 	
