@@ -64,22 +64,18 @@ class ContaTest {
 
     @Test
     void deveCriarUmaContaComSpy(){
-        //Isso aqui não funcionou
-        //Deveria retornar que fez 3 tentativas, porém não deu certo
-//        Conta contaSpy = Mockito.spy(new Conta(new MoedaApiFake()));
-//        contaSpy.getSaldo();
-//        contaSpy.getSaldo();
-//        contaSpy.getSaldo();
-//        Mockito.verify(contaSpy,Mockito.calls(1));
-        Assertions.assertEquals(1,1);
+        Conta contaSpy = Mockito.spy(new Conta(new MoedaApiFake()));
+        contaSpy.getSaldo();
+        contaSpy.getSaldo();
+        contaSpy.getSaldo();
+        Mockito.verify(contaSpy, Mockito.times(3)).getSaldo();
     }
-
-//    @Test
-//    void deveRealizarUmCreditoDe100DolaresComMock(){
+    @Test
+    void deveRealizarUmCreditoDe100DolaresComMock(){
         //Isso aqui deveria funcionar com mocks do mockito
-//        Conta conta = Mockito.mock(Conta.class);
-//        conta.setCredito(100.0,"USD");
-//        Assertions.assertEquals(500.0,Mockito.verify(conta).getSaldo());
-//    }
+//        Conta contaMock = Mockito.mock(Conta.class);
+//        contaMock.setCredito(100.0,"USD");
+//        Assertions.assertEquals(500.0,Mockito.verify(contaMock).getSaldo());
+    }
 
 }
